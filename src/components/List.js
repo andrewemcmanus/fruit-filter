@@ -9,7 +9,7 @@ class List extends Component {
   }
   render() {
     const fruitItems = this.props.fruits.map((eachFruit, idx) => {
-      return <li>{eachFruit}</li>
+      return <li key={idx}>{eachFruit}</li>
     });
     return (
       <div>

@@ -6,7 +6,7 @@ import List from './List';
 
 class FruitContainer extends Component {
   constructor(props) {
-    super();
+    super(props); //is this necessary?
     this.state = {
       // initialize the fruit list as the full list passed into props
       fruitsToDisplay: this.props.fruits,
@@ -27,10 +27,8 @@ class FruitContainer extends Component {
         // }
     })
     this.setState({
-      fruitsToDisplay: filteredFruitList,
-      filterValue
-    })
-
+      fruitsToDisplay: filteredFruitList, filterValue
+    });
   }
   render() {
     // NOTES ON ACCESS:
