@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+// what variables is this inheriting from FruitContainer?
 class List extends Component {
   constructor(props) {
     super();
@@ -8,10 +8,13 @@ class List extends Component {
     };
   }
   render() {
+    const fruitItems = this.props.fruits.map((eachFruit, idx) => {
+      return <li>{eachFruit}</li>
+    });
     return (
       <div>
         <ul>
-          { /* list will go here */ }
+          {fruitItems}
         </ul>
       </div>
 

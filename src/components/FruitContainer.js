@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Input from './Input';
 import List from './List';
 
+// this is the TOP component!
+
 class FruitContainer extends Component {
   constructor(props) {
     super();
@@ -36,7 +38,7 @@ class FruitContainer extends Component {
     // inside of List Component, in order to access props, I have to say props.fruits (see above)
     return (
       <div>
-        <Input value={this.state.filterValue} onChange={this.handleFilterChange}/>
+        <Input value={this.state.filterValue} onChange={this.handleFilterChange} />
         <List fruits={this.state.fruitsToDisplay}/>
       </div>
     )
